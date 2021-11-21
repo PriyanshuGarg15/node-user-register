@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Home</title>
+
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+</head>
+<body>
+
+<section class="vh-100" style="width:500px; margin-left: 50px;">
+    <div class="container h-100">
+        
+              <div class="row justify-content-center" style="width:500px;">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                  
+                  <form class="mx-1 mx-md-4" action="/register" method="POST" onsubmit="return validate()">
+  
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label">First Name</label><input type="text" name="firstname" id="firstname" ErrorMessage="" class="form-control" required > 
+                        <label class="form-label">Last Name</label><input type="text" name="lastname" id="lastname" class="form-control" > 
+                        <label class="form-label">DOB</label><input type="Date" name="dob" id="dob" class="form-control" required> 
+                        <label class="form-label">Phone</label><input type="text" name="phone" id="phone" class="form-control" required> 
+                        <label class="form-label">Email</label><input type="text" name="email" id="email"  class="form-control" required> 
+                        <label class="form-label">Password</label><input type="password" name="password" id="password"  class="form-control" required> 
+                    </div>
+                                   
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                    </div>
+  
+                  </form>
+  
+                </div>
+                
+      </div>
+      <div>
+          <br>
+        <a href="/users" class="btn btn-success bt-lg">All Users</a>
+    </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function validate(){
+        // if(!validator.isEmail(document.getElementById("email").value)){
+        //     window.alert("Insert valid email");
+        //     return false;
+        // }else if(!validator.isDate(document.getElementById("dob").value)){
+        //     window.alert("Insert valid Date");
+        //     return false;
+        // }else if(!validator.isStrongPassword(document.getElementById("password").value)){
+        //     window.alert("Insert stronger password with min 8 length and all characters");
+        //     return false;
+        // }else 
+        // if(!validator.isDecimal(document.getElementById("phone").value) ||
+        // !validator.isLength(document.getElementById("phone").value,10,12)){
+        //     window.alert("Insert valid phonenumber");
+        //     return false;
+        // }
+    }
+  </script>
+</body>
+</html>
