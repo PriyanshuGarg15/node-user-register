@@ -48,15 +48,15 @@ const hashpwd= (pwd)=>{
 }
 
 const fieldValidator=(user)=>{
-        // if(!validator.isEmail(user.email)){
-        //     return false;
-        // }else if(!validator.isDate(user.dob)){
-        //     return false;
-        // }else if(!validator.isStrongPassword(user.password)){
-        //     return false;
-        // }else if((!validator.isDecimal(user.phone)) ||(!validator.isLength(user.phone,10,12))){
-        //     return false;
-        // }else 
+        if(!validator.isEmail(user.email)){
+            return false;
+        }else if(!validator.isDate(user.dob)){
+            return false;
+        }else if(!validator.isStrongPassword(user.password)){
+            return false;
+        }else if((!validator.isDecimal(user.phone)) ||(!validator.isLength(user.phone,10,12))){
+            return false;
+        }else 
             return true;
 }
 module.exports={registerUser,allUser,index,deleteUser}

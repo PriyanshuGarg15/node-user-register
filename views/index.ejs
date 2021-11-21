@@ -47,21 +47,21 @@
 
   <script type="text/javascript">
     function validate(){
-        // if(!validator.isEmail(document.getElementById("email").value)){
-        //     window.alert("Insert valid email");
-        //     return false;
-        // }else if(!validator.isDate(document.getElementById("dob").value)){
-        //     window.alert("Insert valid Date");
-        //     return false;
-        // }else if(!validator.isStrongPassword(document.getElementById("password").value)){
-        //     window.alert("Insert stronger password with min 8 length and all characters");
-        //     return false;
-        // }else 
-        // if(!validator.isDecimal(document.getElementById("phone").value) ||
-        // !validator.isLength(document.getElementById("phone").value,10,12)){
-        //     window.alert("Insert valid phonenumber");
-        //     return false;
-        // }
+        if(!validator.isEmail(document.getElementById("email").value)){
+            window.alert("Insert valid email");
+            return false;
+        }else if(!validator.isDate(document.getElementById("dob").value)){
+            window.alert("Insert valid Date");
+            return false;
+        }else if(!validator.isStrongPassword(document.getElementById("password").value)){
+            window.alert("Insert stronger password with min 8 length and all characters");
+            return false;
+        }else if(!validator.isDecimal(document.getElementById("phone").value) ||
+        !validator.isLength(document.getElementById("phone").value,10,12)){
+            window.alert("Insert valid phonenumber");
+            return false;
+        }else
+            return true;
     }
   </script>
 </body>
