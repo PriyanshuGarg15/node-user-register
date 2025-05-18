@@ -8,7 +8,7 @@ const Router=require('./routes/routes')
 //const {fetchUserData}=require('./controller/controller')
 
 const PORT=process.env.PORT || 3000;
-const dbURI="mongodb+srv://priyanshu:priyanshumongo@cluster0.jq1tp.mongodb.net/node-crud?retryWrites=true&w=majority"
+const dbURI=""
 
 const options = {
     definition: {
